@@ -1,0 +1,10 @@
+
+<form #addCustomerForm="ngForm" (submit)="addCustomer(addCustomerForm)">
+    <input type="text" [(ngModel)]="firstName" name="firstName">
+    <br>
+    <input type="checkbox" [(ngModel)]="terms" name="terms">Accept terms and condtions
+    <br>
+    <button type="submit">Add Customer</button>
+</form>
+
+{{firstName}}
