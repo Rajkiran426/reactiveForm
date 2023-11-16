@@ -10,6 +10,15 @@ export class AddCustomerComponent implements OnInit{
 
   firstName: string ='';
   terms: boolean =false;
+  customerType: string ='';
+  description: string='';
+  radioButton: boolean=true;
+  radioButton1: boolean =true;
+
+  resetForm(formValue: NgForm){
+    //formValue.reset();
+    formValue.resetForm();
+  }
 
   constructor(){
   
@@ -22,5 +31,15 @@ export class AddCustomerComponent implements OnInit{
   ngOnInit(): void {
     
   }
-
+  setFormValue(formValue: NgForm){
+    let formDetails={
+      firstName:'Raj',
+      terms:false,
+      customerType:'1',
+      description:'',
+      radioButton: 1,
+      radioButton1: true
+    }
+    formValue.setValue(formDetails);
+  }
 }
